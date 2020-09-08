@@ -1,0 +1,11 @@
+.PaginatorButton {
+  padding: 0.5em;
+  margin-left: 0.2em;
+  background-color: transparent;
+  border: none;
+}
+.PaginatorButton:hover {
+  background-color: gray;
+  color: white;
+  border-radius: 50%;
+}

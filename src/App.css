@@ -1,3 +1,18 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  padding: 2em;
+}
+
+.Container {
+  padding: 2em;
+}
+
+.Title {
+  color: var(--color-primary);
+  padding-bottom: 1em;
+}
+
+.Data {
+  border-radius: 5px;
+  margin-bottom: 1.5em;
 }

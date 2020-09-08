@@ -1,0 +1,28 @@
+.HistoryTitleSection {
+  margin-bottom: 0.5em;
+  outline: none;
+  cursor: pointer;
+}
+
+.HistoryTitle {
+  color: var(--color-secondary);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.HistoryData > span {
+  display: block;
+  line-height: 1.7;
+}
+
+.HistoryEventDate {
+  font-size: 1em;
+}
+
+.HistoryDetails {
+  font-size: 1.2em;
+}
+
+.HistoryLinks a {
+  padding-right: 0.5em;
+}

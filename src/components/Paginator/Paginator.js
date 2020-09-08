@@ -13,11 +13,11 @@ const Paginator = ({
   const numberOfPages = Math.ceil(totalDataCount / countPerPage);
 
   return (
-    <div>
+    <div className="Paginator">
       {Array(numberOfPages)
         .fill()
         .map((_, index) => (
-          <button key={index} onClick={() => setPage(pageName, index + 1)}>
+          <button className="PaginatorButton" key={index} onClick={() => setPage(pageName, index + 1)}>
             {index + 1}
           </button>
         ))}

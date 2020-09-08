@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import './Histories.css';
 import { startFetchHistory } from '../../actions/histories';
 import { paginationDataSlicer } from '../../utils/helperMethods';
+import History from './History';
 import Paginator from '../Paginator/Paginator';
 
 export const Histories = ({ histories, startFetchHistory, pagination }) => {
   const { currentPage } = pagination;
 
-  const countPerPage = 5;
+  const countPerPage = 3;
 
   useEffect(() => {
     startFetchHistory();
@@ -22,17 +22,10 @@ export const Histories = ({ histories, startFetchHistory, pagination }) => {
   );
 
   return (
-    <div>
-      <h1>History</h1>
-      <div className="Histories">
-        {currentPage}
-        {paginatedData.map(({ id, title, details }) => (
-          <div className="History" key={id}>
-            <p>ID: {id}</p>
-            <p>Title: {title}</p>
-            <p>Details: {details}</p>
-          </div>
-        ))}
+    <div className="Container">
+      <h1 className="Title">History</h1>
+      <div className="DataContainer">
+        {paginatedData.map(history => <History key={history.id} history={history} />)}
       </div>
       <div>
         <Paginator

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import './Payloads.css';
 import { startFetchPayloads } from '../../actions/payloads';
 import { paginationDataSlicer } from '../../utils/helperMethods';
 import Paginator from '../Paginator/Paginator';
+import Payload from "./Payload";
 
 export const Payloads = ({ payloads, startFetchPayloads, pagination }) => {
   const { currentPage } = pagination;
@@ -22,17 +22,10 @@ export const Payloads = ({ payloads, startFetchPayloads, pagination }) => {
   );
 
   return (
-    <div>
-      <h1>Payload</h1>
-      <div className="Payloads">
-        {currentPage}
-        {paginatedData.map(({ payload_id, nationality, payload_type }) => (
-          <div className="Payload" key={payload_id}>
-            <p>Payload ID: {payload_id}</p>
-            <p>Nationality: {nationality}</p>
-            <p>Payload Type: {payload_type}</p>
-          </div>
-        ))}
+    <div className="Container">
+      <h1 className="Title">Payload</h1>
+      <div className="DataContainer">
+        {paginatedData.map(payload => <Payload key={payload.payload_id} payload={payload} />)}
       </div>
       <div>
         <Paginator

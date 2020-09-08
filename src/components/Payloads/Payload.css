@@ -1,0 +1,27 @@
+.PayloadTitleSection {
+  margin-bottom: 0.5em;
+}
+
+.PayloadTitleSection {
+  outline: none;
+  cursor: pointer;
+}
+
+.PayloadTitle {
+  color: var(--color-secondary);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.PayloadData > span {
+  display: block;
+  line-height: 1.7;
+}
+
+.PayloadType {
+  font-size: 1.3em;
+}
+
+.PayloadOrbitSection > span {
+  display: block;
+}
