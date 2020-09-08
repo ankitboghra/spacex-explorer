@@ -23,7 +23,7 @@ export const Payloads = ({ payloads, startFetchPayloads, pagination }) => {
 
   return (
     <div className="Container">
-      <h1 className="Title">Payload</h1>
+      <h1 className="Title">Payloads</h1>
       <div className="DataContainer">
         {paginatedData.map(payload => <Payload key={payload.payload_id} payload={payload} />)}
       </div>

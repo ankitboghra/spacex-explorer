@@ -1,0 +1,12 @@
+.HeaderNav {
+  float: right;
+}
+
+.HeaderLink {
+  padding: 1em;
+  text-decoration: none;
+  color: inherit;
+}
+.HeaderActiveLink {
+  font-weight: 600;
+}
